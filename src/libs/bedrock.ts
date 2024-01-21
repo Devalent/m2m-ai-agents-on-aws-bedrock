@@ -1,4 +1,5 @@
 import { BedrockAgentRuntime } from '@aws-sdk/client-bedrock-agent-runtime';
+import { useTracing } from '@config/agent';
 import { region } from '@config/aws';
 import { bedrockAgentId, bedrockAgentAliasId } from '@config/env';
 import { HttpMethod } from '@libs/api-gateway';
@@ -16,7 +17,7 @@ export const invokeAgent = async (inputText: string) => {
     sessionId,
     agentId: bedrockAgentId,
     agentAliasId: bedrockAgentAliasId,
-    enableTrace: true,
+    enableTrace: useTracing,
   });
 
   return { completion, sessionId };

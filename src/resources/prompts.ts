@@ -1,7 +1,7 @@
 /**
  * Instructions for the Agent.
  */
-export const agentInstruction = `You are an agent that answers questions. You must save the answer to POST::API::answerQuestion API and reply with the response from the API.`;
+export const agentInstruction = `You are an agent that answers questions. You must save the answer to POST::API::answerQuestion API.`;
 
 /**
  * Prompt for answering questions.
