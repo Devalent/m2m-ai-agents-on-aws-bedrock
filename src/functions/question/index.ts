@@ -1,7 +1,8 @@
-import schema from './schema';
+import type { AWS } from '@serverless/typescript';
 import { handlerPath } from '@libs/handler-resolver';
+import schema from './schema';
 
-export default {
+export default <AWS['functions']['']>{
   handler: `${handlerPath(__dirname)}/handler.main`,
   events: [
     {

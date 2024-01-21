@@ -1,4 +1,7 @@
 {
+  "resource": "/question",
+  "path": "/question",
+  "httpMethod": "POST",
   "headers": {
     "Content-Type": "application/json"
   },
