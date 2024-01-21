@@ -5,5 +5,5 @@
   "headers": {
     "Content-Type": "application/json"
   },
-  "body": "{\"text\": \"Betty had a pack of 25 pencil crayons. She gave five to her friend Theresa. She gave three to her friend Mary.\",\"question\": \"How many pencil crayons does Betty have left?\"}"
+  "body": "{\"question\": \"Betty had a pack of 25 pencil crayons. She gave five to her friend Theresa. She gave three to her friend Mary. How many pencil crayons does Betty have left?\"}"
 }

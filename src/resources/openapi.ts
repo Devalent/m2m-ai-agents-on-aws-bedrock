@@ -12,7 +12,7 @@ export const agentApiSpec = {
     '/answer-question': {
       post: {
         summary: 'API to save answers to questions',
-        description: 'Answer a question about the provided text.',
+        description: 'Save answers to questions.',
         operationId: 'answerQuestion',
         requestBody: {
           required: true,

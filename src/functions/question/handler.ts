@@ -8,8 +8,7 @@ import { readDocument } from '@libs/dynamodb';
 import { answersTable } from '@config/env';
 
 const api: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
-  const inputText = textQuestionPrompt // Put text into the prompt template
-    .replace('{text}', event.body.text)
+  const inputText = textQuestionPrompt // Put question into the prompt template
     .replace('{question}', event.body.question);
 
   const { completion, sessionId } = await invokeAgent(inputText); // Call Bedrock agent with the text

@@ -1,19 +1,9 @@
 /**
  * Instructions for the Agent.
  */
-export const agentInstruction = `You are an agent that answers questions based on provided texts. Always call POST::API::answerQuestion to save your answer. If you cannot answer the question, reply with "I don't know". After calling the API, always reply with "OK".`;
+export const agentInstruction = `You are an agent that answers questions. You must save the answer to POST::API::answerQuestion API and reply with the response from the API.`;
 
 /**
- * Prompt for answering questions based on the provided text.
+ * Prompt for answering questions.
  */
-export const textQuestionPrompt = `
-You have been provided with the text:
-<text>
-{text}
-</text>
-
-Save the answer to the following question to the API:
-<question>
-{question}
-</question>
-`;
+export const textQuestionPrompt = `Save the answer the following question: <question>{question}</question>`;
