@@ -6,7 +6,8 @@
   "scripts": {
     "deploy": "npm run predeploy && sls deploy",
     "predeploy": "ts-node ./scripts/predeploy.ts",
-    "dispose": "sls remove",
+    "dispose": "sls remove && npm run postdispose",
+    "postdispose": "ts-node ./scripts/postdispose.ts",
     "invoke": "sls invoke --function question --path src/functions/question/mock.json",
     "invoke:local": "sls invoke local --function question --path src/functions/question/mock.json"
   },

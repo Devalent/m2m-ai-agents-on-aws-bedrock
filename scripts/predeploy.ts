@@ -5,7 +5,7 @@ import * as emoji from 'node-emoji';
 import * as path from 'path';
 import { terminal } from 'terminal-kit';
 
-// A script to deploy and dispose AWS Bedrock resources,
+// A script to deploy AWS Bedrock resources,
 // since there is currently no CloudFormation support available.
 
 const envpath = path.resolve(__dirname, '../.env');

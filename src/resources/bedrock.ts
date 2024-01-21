@@ -3,6 +3,7 @@ import { IAM } from '@aws-sdk/client-iam';
 import { STS } from '@aws-sdk/client-sts';
 import * as agentConfig from '@config/agent';
 import * as awsConfig from '@config/aws';
+import * as envConfig from '@config/env';
 import * as prompts from '@resources/prompts';
 import { agentApiSpec } from '@resources/openapi';
 
@@ -201,7 +202,11 @@ export const deploy = async () => {
 /**
  * Dispose deployed Bedrock resources.
  */
-export const dispose = async () => {};
+export const dispose = async () => {
+  const { bedrockAgentId: agentId } = envConfig;
+
+  await aws_bedrock.deleteAgent({ agentId, skipResourceInUseCheck: true });
+};
 
 /**
  * Wait for agent to finish updating.
