@@ -62,6 +62,7 @@ const serverlessConfiguration: AWS = {
   functions: { api, question },
   resources: {
     Resources: {
+      // Allow Bedrock to call the agent API Lambda
       InvokePermission: {
         Type: 'AWS::Lambda::Permission',
         Properties: {
@@ -76,6 +77,7 @@ const serverlessConfiguration: AWS = {
           },
         },
       },
+      // DynamoDB table to store agent answers
       TableAnswers: {
         Type: 'AWS::DynamoDB::Table',
         Properties: {

@@ -5,7 +5,8 @@
   "main": "serverless.ts",
   "scripts": {
     "deploy": "npm run predeploy && sls deploy",
-    "predeploy": "ts-node ./scripts/predeploy.ts"
+    "predeploy": "ts-node ./scripts/predeploy.ts",
+    "dispose": ""
   },
   "engines": {
     "node": ">=20"

@@ -1,11 +1,4 @@
-import {
-  AgentStatus,
-  BedrockAgent,
-  CreationMode,
-  PromptConfiguration,
-  PromptState,
-  PromptType,
-} from '@aws-sdk/client-bedrock-agent';
+import { AgentStatus, BedrockAgent } from '@aws-sdk/client-bedrock-agent';
 import { IAM } from '@aws-sdk/client-iam';
 import { STS } from '@aws-sdk/client-sts';
 import * as agentConfig from '@config/agent';
