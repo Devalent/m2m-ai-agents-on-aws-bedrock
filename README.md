@@ -1,5 +1,9 @@
 # AWS Bedrock Agent Example
 
+<p align="center">
+  <img src="./img.png?raw=true" alt="" />
+</p>
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/)
