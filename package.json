@@ -1,0 +1,44 @@
+{
+  "name": "m2m-ai",
+  "version": "1.0.0",
+  "description": "Serverless aws-nodejs-typescript template",
+  "main": "serverless.ts",
+  "scripts": {
+    "deploy": "npm run predeploy && sls deploy",
+    "predeploy": "ts-node ./scripts/predeploy.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agent": "^3.496.0",
+    "@aws-sdk/client-bedrock-agent-runtime": "^3.496.0",
+    "@aws-sdk/client-dynamodb": "^3.496.0",
+    "@aws-sdk/client-iam": "^3.496.0",
+    "@aws-sdk/client-sts": "^3.496.0",
+    "@aws-sdk/lib-dynamodb": "^3.496.0",
+    "@middy/core": "^5.2.3",
+    "@middy/http-json-body-parser": "^5.2.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3.0.0",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/node": "^14.14.25",
+    "@types/node-emoji": "^2.1.0",
+    "@types/terminal-kit": "^2.5.6",
+    "@types/uuid": "^9.0.7",
+    "dotenv": "^16.3.2",
+    "esbuild": "^0.14.11",
+    "json-schema-to-ts": "^1.5.0",
+    "node-emoji": "^2.1.3",
+    "prettier": "^3.2.4",
+    "serverless": "^3.0.0",
+    "serverless-esbuild": "^1.23.3",
+    "terminal-kit": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  },
+  "license": "MIT"
+}
